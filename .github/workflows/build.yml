@@ -1,0 +1,27 @@
+# Rebuilds the README cards from the portfolio's content.json, so edits made on the
+# portfolio admin page show up here too. Runs weekly, on changes to the builder, or by hand.
+name: Build profile cards
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '30 3 * * 1'
+  push:
+    paths: ['build.py', 'fonts/**']
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install fonttools pillow
+      - run: python build.py
+      - name: Commit changed cards
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets README.md
+          git diff --cached --quiet || (git commit -m "Rebuild profile cards from portfolio content" && git push)
