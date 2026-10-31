@@ -5,7 +5,7 @@
 
 <a href="https://pavankumarmathi489-cpu.github.io/portfolio/"><img src="assets/btn-portfolio.svg" height="46" alt="View portfolio"></a>
 <a href="https://pavankumarmathi489-cpu.github.io/portfolio/resume/Pavan_Kumar_Mathi_Resume_Combined.pdf"><img src="assets/btn-resume.svg" height="46" alt="Résumé (PDF)"></a>
-<a href="https://www.linkedin.com/in/pavan-kumar-mathi-b554683a"><img src="assets/btn-linkedin.svg" height="46" alt="LinkedIn"></a>
+<a href="https://www.linkedin.com/in/pavan-kumar-mathi-b554683a0"><img src="assets/btn-linkedin.svg" height="46" alt="LinkedIn"></a>
 <a href="mailto:mpk92789@gmail.com"><img src="assets/btn-email.svg" height="46" alt="Email"></a>
 
 </div>
